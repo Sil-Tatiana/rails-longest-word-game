@@ -1,0 +1,15 @@
+<div class="letters">
+  <li><%= @letters.each do |letter| %>
+      <div><%= letter %></div>
+      <% end %>
+  </li>
+<div class="container">
+<form action="/score" method="post">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" name="word" placeholder="Write your word:" >
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Play</button>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </div>
+</form>
+</div>
+</div>
